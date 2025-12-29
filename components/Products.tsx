@@ -11,6 +11,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import Image from "next/image";
+import { Essential } from "@/utils/essentials";
 
 const products = [
   {
@@ -101,7 +102,7 @@ const prevSlide = () => {
   const handleWhatsAppClick = (product: (typeof products)[0]) => {
     const message = `Hello! I'm interested in purchasing:\n\n*${product.name}*\nPrice: ₹${product.price}\nOriginal Price: ₹${product.originalPrice}\n\nPlease provide more details about this product.`;
     const encodedMessage = encodeURIComponent(message);
-    const phoneNumber = "919876543210"; // Replace with your WhatsApp number
+    const phoneNumber = Essential.phone; // Replace with your WhatsApp number
     window.open(
       `https://wa.me/${phoneNumber}?text=${encodedMessage}`,
       "_blank"
