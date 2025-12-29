@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   siteName: "Veena Naturals",
   images: [
     {
-      url: "https://www.veena-naturals.vercel.app/images/og-image.jpg",
+      url: "https://www.veena-naturals.vercel.app/images/logo/logo.jpg",
       width: 1200,
       height: 630,
       alt: "Veena Naturals Ayurvedic Beauty Products",
@@ -49,7 +49,7 @@ twitter: {
   description:
     "100% natural Ayurvedic skincare and haircare products.",
   images: [
-    "https://www.veena-naturals.vercel.app/images/og-image.jpg",
+    "https://www.veena-naturals.vercel.app/images/logo/logo.jpg",
   ],
 },
 
