@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { Menu, X, ShoppingBag, Phone } from "lucide-react";
 import { Essential } from "@/utils/essentials";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -70,7 +71,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <Link
+            href="/#home"
+            className="flex items-center space-x-3 group"
+            aria-label="Go to Veena Naturals home page"
+          >
             <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center">
               <Image
                 src="/images/logo/logo.jpg"
@@ -82,10 +87,10 @@ const Navbar = () => {
               />
             </div>
 
-            <span className="text-xl md:text-2xl font-bold text-gray-800">
+            <span className="text-xl md:text-2xl font-bold text-gray-800 group-hover:text-primary transition-colors">
               VeenaNaturals
             </span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation - Central Container with proper margin */}
           <div className="hidden md:flex flex-1 justify-center items-center ml-12">
@@ -154,22 +159,26 @@ const Navbar = () => {
       >
         {/* Drawer Header */}
         <div className="flex items-center justify-between p-6 border-b">
-          <div className="flex items-center space-x-3">
+          <Link
+            href="/#home"
+            aria-label="Go to Veena Naturals home page"
+            className="flex items-center space-x-3 group"
+          >
             <div className="w-14 h-14 flex items-center justify-center">
               <Image
                 src="/images/logo/logo.jpg"
                 alt="Veena Naturals logo - natural Ayurvedic skincare brand"
                 width={48}
                 height={48}
-                className="object-contain rounded-full"
+                className="object-contain rounded-full transition-transform group-hover:scale-105"
                 priority
               />
             </div>
 
-            <span className="text-xl font-bold text-gray-800">
+            <span className="text-xl font-bold text-gray-800 transition-colors group-hover:text-primary">
               VeenaNaturals
             </span>
-          </div>
+          </Link>
           <button
             onClick={() => setIsOpen(false)}
             className="p-2 hover:bg-gray-100 rounded-full"
