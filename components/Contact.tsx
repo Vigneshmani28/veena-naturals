@@ -251,18 +251,37 @@ const Contact = () => {
 
             {/* Response Time */}
             <div className="mt-8 p-4 bg-white rounded-xl border border-primary/20">
-              <div className="flex items-center space-x-3">
-                <div className="relative flex items-center justify-center">
+              <div className="flex items-start space-x-4">
+                {/* Pulse Indicator */}
+                <div className="relative flex items-center justify-center mt-1">
                   <span className="absolute inline-flex h-5 w-5 rounded-full bg-primary/40 animate-ping"></span>
                   <span className="relative inline-flex h-3 w-3 rounded-full bg-primary"></span>
                 </div>
 
-                <div>
+                {/* Text Content */}
+                <div className="flex-1">
                   <div className="font-medium text-gray-900">
                     Typical response time: 1-2 hours
                   </div>
-                  <div className="text-sm text-gray-600">
-                    During business hours
+
+                  <div className="text-sm text-gray-600 mt-1">
+                    We personally review every message to recommend the right
+                    product based on your skin or hair type.
+                  </div>
+
+                  <div className="mt-3 flex items-center gap-4">
+                    <span className="text-xs text-gray-500">
+                      Available during business hours
+                    </span>
+
+                    <a
+  href={`tel:${Essential.phone}`}
+  className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline whitespace-nowrap"
+>
+  <Phone size={16} />
+  Call now {Essential.phone}
+</a>
+
                   </div>
                 </div>
               </div>

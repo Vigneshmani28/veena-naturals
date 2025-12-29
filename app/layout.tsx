@@ -25,31 +25,34 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Veena Naturals" }],
   creator: "Veena Naturals",
-  metadataBase: new URL("https://www.veenanaturals.in"),
+  metadataBase: new URL("https://www.veena-naturals.vercel.app"),
   openGraph: {
-    title: "Veena Naturals | Pure Ayurvedic Beauty",
-    description:
-      "Natural face packs and hair oils crafted with traditional herbs.",
-    url: "https://www.veenanaturals.in",
-    siteName: "Veena Naturals",
-    images: [
-      {
-        url: "/images/logo/logo.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Veena Naturals Products",
-      },
-    ],
-    locale: "en_IN",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Veena Naturals | Ayurvedic Beauty",
-    description:
-      "100% natural Ayurvedic skincare and haircare products.",
-    images: ["/images/logo/logo.jpg"],
-  },
+  title: "Veena Naturals | Pure Ayurvedic Beauty",
+  description:
+    "Natural face packs and hair oils crafted with traditional herbs.",
+  url: "https://www.veena-naturals.vercel.app",
+  siteName: "Veena Naturals",
+  images: [
+    {
+      url: "https://www.veena-naturals.vercel.app/images/og-image.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Veena Naturals Ayurvedic Beauty Products",
+    },
+  ],
+  locale: "en_IN",
+  type: "website",
+},
+twitter: {
+  card: "summary_large_image",
+  title: "Veena Naturals | Ayurvedic Beauty",
+  description:
+    "100% natural Ayurvedic skincare and haircare products.",
+  images: [
+    "https://www.veena-naturals.vercel.app/images/og-image.jpg",
+  ],
+},
+
 };
 
 export default function RootLayout({

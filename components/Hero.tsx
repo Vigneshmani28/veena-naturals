@@ -97,7 +97,7 @@ const Hero = () => {
                 />
 
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/25 to-emerald-300/10" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/25 to-emerald-300/5" />
 
                 {/* Content */}
                 <div className="relative z-10 flex items-center justify-center h-full">

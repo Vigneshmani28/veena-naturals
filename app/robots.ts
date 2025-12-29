@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.veenanaturals.in/sitemap.xml",
+    sitemap: "https://www.veena-naturals.vercel.app/sitemap.xml",
   };
 }
