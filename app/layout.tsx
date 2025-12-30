@@ -46,16 +46,16 @@ export const metadata: Metadata = {
   },
   category: 'Beauty & Personal Care',
   alternates: {
-    canonical: 'https://www.veenanaturals.in',
+    canonical: 'https://veenanaturals.in',
   },
   openGraph: {
     title: "Veena Naturals | Pure Ayurvedic Beauty Products",
     description: "Discover 100% natural Ayurvedic face packs, hair oils & skincare. Traditional herbs, modern beauty.",
-    url: "https://www.veenanaturals.in",
+    url: "https://veenanaturals.in",
     siteName: "Veena Naturals",
     images: [
       {
-        url: "https://www.veenanaturals.in/images/og-image.jpg",
+        url: "https://veenanaturals.in/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Veena Naturals Ayurvedic Beauty Products",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     title: "Veena Naturals | Ayurvedic Beauty & Skincare",
     description: "100% natural Ayurvedic skincare and haircare products. Pure herbs, visible results.",
     creator: "@veenanaturals",
-    images: ["https://www.veenanaturals.in/images/logo/logo.jpg"],
+    images: ["https://veenanaturals.in/images/logo/logo.jpg"],
   },
 };
 

@@ -29,8 +29,8 @@ export default function Home() {
           "herbal hair oil for hair growth",
           "chemical-free beauty products",
         ]}
-        canonicalUrl="https://www.veenanaturals.in"
-        ogImage="https://www.veenanaturals.in/images/og-image.jpg"
+        canonicalUrl="https://veenanaturals.in"
+        ogImage="https://veenanaturals.in/images/og-image.jpg"
       />
 
       <Navbar />

@@ -7,8 +7,8 @@ export default function StructuredData() {
     "@type": "HealthAndBeautyBusiness",
     "name": "Veena Naturals",
     "description": "Pure Ayurvedic beauty products and herbal skincare",
-    "url": "https://www.veenanaturals.in",
-    "logo": "https://www.veenanaturals.in/images/logo/logo.jpg",
+    "url": "https://veenanaturals.in",
+    "logo": "https://veenanaturals.in/images/logo/logo.jpg",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "IN",

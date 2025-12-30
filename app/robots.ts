@@ -8,9 +8,8 @@ export default function robots(): MetadataRoute.Robots {
       disallow: ["/private/", "/admin/", "/api/"],
     },
     sitemap: [
-      "https://www.veenanaturals.in/sitemap.xml",
-      "https://www.veenanaturals.in/sitemap-products.xml",
+      "https://veenanaturals.in/sitemap.xml"
     ],
-    host: "www.veenanaturals.in",
+    host: "veenanaturals.in",
   };
 }

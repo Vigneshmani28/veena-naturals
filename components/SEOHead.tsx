@@ -16,7 +16,7 @@ export default function SEOHead({
   title,
   description,
   canonicalUrl,
-  ogImage = 'https://www.veenanaturals.in/images/og-image.jpg',
+  ogImage = 'https://veenanaturals.in/images/og-image.jpg',
   keywords,
   publishedTime,
   modifiedTime,
@@ -36,7 +36,7 @@ export default function SEOHead({
       <meta name="description" content={siteDescription} />
       <meta name="keywords" content={keywords?.join(', ') || 'Ayurvedic beauty, natural skincare, herbal products'} />
       
-      <link rel="canonical" href={canonicalUrl || 'https://www.veenanaturals.in'} />
+      <link rel="canonical" href={canonicalUrl || 'https://veenanaturals.in'} />
       
       <meta property="og:title" content={siteTitle} />
       <meta property="og:description" content={siteDescription} />
