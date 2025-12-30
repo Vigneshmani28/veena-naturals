@@ -390,14 +390,14 @@ const prevSlide = () => {
                         </button>
 
                         {/* Product Badge */}
-                        <div className="absolute top-4 left-4">
+                        {/* <div className="absolute top-4 left-4">
                           <span className="px-3 py-1 bg-primary/90 text-white text-xs font-semibold rounded-full backdrop-blur-sm">
                             {Math.round(
                               (1 - product.price / product.originalPrice) * 100
                             )}
                             % OFF
                           </span>
-                        </div>
+                        </div> */}
                       </div>
 
                       <div className="p-6">
@@ -420,7 +420,7 @@ const prevSlide = () => {
                         </p>
 
                         <div className="flex items-center justify-between">
-                          <div>
+                          {/* <div>
                             <div className="flex items-baseline gap-2">
                               <span className="text-2xl font-bold text-primary">
                                 ₹{product.price}
@@ -432,7 +432,7 @@ const prevSlide = () => {
                             <p className="text-xs text-gray-500 mt-1">
                               Free shipping • 30-day returns
                             </p>
-                          </div>
+                          </div> */}
 
                           <button
                             onClick={() => handleWhatsAppClick(product)}
