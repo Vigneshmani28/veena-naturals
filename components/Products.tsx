@@ -240,14 +240,14 @@ const prevSlide = () => {
 
                       {/* Price */}
                       <div className="flex items-center justify-between">
-                        <div>
+                        {/* <div>
                           <span className="text-2xl font-bold text-primary">
                             ₹{product.price}
                           </span>
                           <span className="text-gray-400 line-through ml-2">
                             ₹{product.originalPrice}
                           </span>
-                        </div>
+                        </div> */}
                         <button
                           onClick={() => handleWhatsAppClick(product)}
                           className="cursor-pointer btn-primary flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg"

@@ -12,7 +12,7 @@ const Navbar = () => {
   const [activeLink, setActiveLink] = useState("#home");
 
   // Phone number configuration
-  const phoneNumber = Essential.phone;
+  const phoneNumber = Essential.phone.primary;
 
   // Update active link on scroll
   const updateActiveLink = useCallback(() => {
@@ -120,9 +120,9 @@ const Navbar = () => {
           {/* Desktop Right Side - Shop Button & Phone */}
           <div className="hidden md:flex items-center ml-12">
             <a
-              href={`tel:${phoneNumber}`}
+              href={`tel:${Essential.phone.primary}`}
               className="
-      flex items-center gap-2
+      flex items-center gap-3
       px-5 py-2.5
       rounded-full
       bg-primary
@@ -135,8 +135,13 @@ const Navbar = () => {
     "
             >
               <Phone size={18} />
+
               <span>Call Us</span>
-              <span className="opacity-90">{phoneNumber}</span>
+
+              <div className="flex flex-col leading-tight text-sm opacity-90">
+                <span>{Essential.phone.primary}</span>
+                <span>{Essential.phone.secondary}</span>
+              </div>
             </a>
           </div>
 
@@ -196,14 +201,25 @@ const Navbar = () => {
               <div className="p-3 bg-primary/10 rounded-full">
                 <Phone size={22} className="text-primary" />
               </div>
+
               <div>
                 <p className="text-sm text-gray-600">Call us anytime</p>
-                <a
-                  href={`tel:${phoneNumber}`}
-                  className="text-lg font-bold text-primary hover:underline"
-                >
-                  {phoneNumber}
-                </a>
+
+                <div className="flex flex-col leading-tight">
+                  <a
+                    href={`tel:${Essential.phone.primary}`}
+                    className="text-lg font-bold text-primary hover:underline"
+                  >
+                    {Essential.phone.primary}
+                  </a>
+
+                  <a
+                    href={`tel:${Essential.phone.secondary}`}
+                    className="text-sm font-medium text-primary/80 hover:underline"
+                  >
+                    {Essential.phone.secondary}
+                  </a>
+                </div>
               </div>
             </div>
           </div>

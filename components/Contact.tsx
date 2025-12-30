@@ -58,25 +58,33 @@ const Contact = () => {
       icon: <Mail className="w-6 h-6" />,
       title: "Email Us",
       info: Essential.email,
-      description: "We respond within a hour",
+      description: "We respond within an hour",
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Call Us",
-      info: Essential.phone,
-      description: "We are available all day long",
+      info: (
+        <div className="flex flex-col gap-1">
+          <a
+            href={`tel:${Essential.phone.primary}`}
+            className="text-primary font-medium hover:underline"
+          >
+            {Essential.phone.primary}
+          </a>
+          <a
+            href={`tel:${Essential.phone.secondary}`}
+            className="text-primary font-medium hover:underline"
+          >
+            {Essential.phone.secondary}
+          </a>
+        </div>
+      ),
+      description: "We are available during business hours",
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Visit Us",
-      info:
-        Essential.address.city +
-        ", " +
-        Essential.address.state +
-        ", " +
-        Essential.address.country +
-        " - " +
-        Essential.address.zipcode,
+      info: `${Essential.address.city}, ${Essential.address.state}, ${Essential.address.country} - ${Essential.address.zipcode}`,
     },
   ];
 
@@ -120,7 +128,8 @@ const Contact = () => {
                     <h4 className="font-bold text-gray-900 text-lg">
                       {item.title}
                     </h4>
-                    <p className="text-primary font-medium">{item.info}</p>
+                    <div className="text-primary font-medium">{item.info}</div>
+
                     <p className="text-gray-600 text-sm">{item.description}</p>
                   </div>
                 </div>
@@ -269,19 +278,28 @@ const Contact = () => {
                     product based on your skin or hair type.
                   </div>
 
-                  <div className="mt-3 flex items-center gap-4">
+                  <div className="mt-3 flex flex-col gap-2">
                     <span className="text-xs text-gray-500">
                       Available during business hours
                     </span>
 
-                    <a
-  href={`tel:${Essential.phone}`}
-  className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline whitespace-nowrap"
->
-  <Phone size={16} />
-  Call now {Essential.phone}
-</a>
+                    <div className="flex flex-col gap-1">
+                      <a
+                        href={`tel:${Essential.phone.primary}`}
+                        className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline whitespace-nowrap"
+                      >
+                        <Phone size={16} />
+                        Call {Essential.phone.primary}
+                      </a>
 
+                      <a
+                        href={`tel:${Essential.phone.secondary}`}
+                        className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline whitespace-nowrap"
+                      >
+                        <Phone size={16} />
+                        Call {Essential.phone.secondary}
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

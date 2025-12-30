@@ -1,6 +1,9 @@
 type AddressProps = {
   email: string;
-  phone: string;
+  phone: {
+    primary: string;
+    secondary?: string;
+  };
   address: {
     country: string;
     state: string;
@@ -11,6 +14,7 @@ type AddressProps = {
   className?: string;
 };
 
+
 export default function Address({
   email,
   phone,
@@ -18,9 +22,7 @@ export default function Address({
   className = "text-gray-700",
 }: AddressProps) {
   return (
-    <address
-      className={`not-italic text-sm space-y-1 ${className}`}
-    >
+    <address className={`not-italic text-sm space-y-1 ${className}`}>
       <p className="font-semibold text-gray-900">Veena Naturals</p>
 
       <p>
@@ -35,7 +37,7 @@ export default function Address({
 
       <div className="pt-2 space-y-1">
         {/* Email */}
-        <p className="flex items-center gap-1 whitespace-nowrap">
+        <p className="flex items-center gap-1">
           <span className="font-medium">Email:</span>
           <a
             href={`mailto:${email}`}
@@ -46,15 +48,27 @@ export default function Address({
         </p>
 
         {/* Phone */}
-        <p className="flex items-center gap-1 whitespace-nowrap">
+        <div className="flex items-start gap-1">
           <span className="font-medium">Phone:</span>
-          <a
-            href={`tel:${phone.replace(/\s+/g, "")}`}
-            className="hover:underline"
-          >
-            {phone}
-          </a>
-        </p>
+
+          <div className="flex flex-col leading-tight">
+            <a
+              href={`tel:${phone.primary.replace(/\s+/g, "")}`}
+              className="hover:underline"
+            >
+              {phone.primary}
+            </a>
+
+            {phone.secondary && (
+              <a
+                href={`tel:${phone.secondary.replace(/\s+/g, "")}`}
+                className="hover:underline text-sm opacity-80"
+              >
+                {phone.secondary}
+              </a>
+            )}
+          </div>
+        </div>
       </div>
     </address>
   );

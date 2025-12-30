@@ -3,6 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Suspense } from "react";
 import GlobalLoader from "@/components/GlobalLoader";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
+import StructuredData from "@/components/StructuredData";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -11,48 +14,63 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Veena Naturals | Pure Ayurvedic Beauty Products",
-    template: "%s | Veena Naturals",
+    default: "Veena Naturals | Pure Ayurvedic Beauty & Skincare Products",
+    template: "%s | Veena Naturals Ayurvedic Products",
   },
   description:
-    "Veena Naturals offers 100% natural Ayurvedic face packs and hair oils made from traditional herbal ingredients.",
+    "100% natural Ayurvedic face packs, hair oils & skincare products made with traditional herbal ingredients. Cruelty-free, chemical-free beauty solutions.",
   keywords: [
     "Ayurvedic beauty products",
     "natural face pack",
     "herbal hair oil",
     "organic skincare India",
     "Veena Naturals",
+    "ayurvedic skincare",
+    "natural beauty products",
+    "herbal face pack",
+    "ayurvedic hair oil",
+    "chemical-free skincare",
+    "Indian herbal products",
+    "vegan beauty India"
   ],
-  authors: [{ name: "Veena Naturals" }],
-  creator: "Veena Naturals",
-  metadataBase: new URL("https://www.veena-naturals.vercel.app"),
-  openGraph: {
-  title: "Veena Naturals | Pure Ayurvedic Beauty",
-  description:
-    "Natural face packs and hair oils crafted with traditional herbs.",
-  url: "https://www.veena-naturals.vercel.app",
-  siteName: "Veena Naturals",
-  images: [
-    {
-      url: "https://www.veena-naturals.vercel.app/images/logo/logo.jpg",
-      width: 1200,
-      height: 630,
-      alt: "Veena Naturals Ayurvedic Beauty Products",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
-  ],
-  locale: "en_IN",
-  type: "website",
-},
-twitter: {
-  card: "summary_large_image",
-  title: "Veena Naturals | Ayurvedic Beauty",
-  description:
-    "100% natural Ayurvedic skincare and haircare products.",
-  images: [
-    "https://www.veena-naturals.vercel.app/images/logo/logo.jpg",
-  ],
-},
-
+  },
+  category: 'Beauty & Personal Care',
+  alternates: {
+    canonical: 'https://www.veenanaturals.in',
+  },
+  openGraph: {
+    title: "Veena Naturals | Pure Ayurvedic Beauty Products",
+    description: "Discover 100% natural Ayurvedic face packs, hair oils & skincare. Traditional herbs, modern beauty.",
+    url: "https://www.veenanaturals.in",
+    siteName: "Veena Naturals",
+    images: [
+      {
+        url: "https://www.veenanaturals.in/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Veena Naturals Ayurvedic Beauty Products",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Veena Naturals | Ayurvedic Beauty & Skincare",
+    description: "100% natural Ayurvedic skincare and haircare products. Pure herbs, visible results.",
+    creator: "@veenanaturals",
+    images: ["https://www.veenanaturals.in/images/logo/logo.jpg"],
+  },
 };
 
 export default function RootLayout({
@@ -62,9 +80,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preload" as="image" href="/images/logo/logo.jpg" />
+        <meta name="theme-color" content="#3B875F" />
+      </head>
       <body className={inter.className}>
         <Suspense fallback={<GlobalLoader />}>
           {children}
+          <StructuredData />
+          <SpeedInsights />
+          <Analytics />
         </Suspense>
       </body>
     </html>

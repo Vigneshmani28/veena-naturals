@@ -5,7 +5,12 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: ["/private/", "/admin/", "/api/"],
     },
-    sitemap: "https://www.veena-naturals.vercel.app/sitemap.xml",
+    sitemap: [
+      "https://www.veenanaturals.in/sitemap.xml",
+      "https://www.veenanaturals.in/sitemap-products.xml",
+    ],
+    host: "www.veenanaturals.in",
   };
 }
