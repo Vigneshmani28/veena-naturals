@@ -204,7 +204,7 @@ export async function POST(req: Request) {
                 <div class="contact-item">
                     <div class="contact-icon">📱</div>
                     <div class="contact-label">Phone</div>
-                    <div class="contact-value">+91 90259 12491</div>
+                    <div class="contact-value">+91 99521 55108</div>
                 </div>
             </div>
             

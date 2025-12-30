@@ -151,7 +151,6 @@ const Footer = () => {
                     email={Essential.email}
                     phone={{
                       primary: Essential.phone.primary,
-                      secondary: Essential.phone.secondary,
                     }}
                     address={Essential.address}
                     className="text-gray-300"

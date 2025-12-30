@@ -58,15 +58,6 @@ export default function Address({
             >
               {phone.primary}
             </a>
-
-            {phone.secondary && (
-              <a
-                href={`tel:${phone.secondary.replace(/\s+/g, "")}`}
-                className="hover:underline text-sm opacity-80"
-              >
-                {phone.secondary}
-              </a>
-            )}
           </div>
         </div>
       </div>

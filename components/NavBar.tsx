@@ -136,11 +136,8 @@ const Navbar = () => {
             >
               <Phone size={18} />
 
-              <span>Call Us</span>
-
               <div className="flex flex-col leading-tight text-sm opacity-90">
                 <span>{Essential.phone.primary}</span>
-                <span>{Essential.phone.secondary}</span>
               </div>
             </a>
           </div>
@@ -211,13 +208,6 @@ const Navbar = () => {
                     className="text-lg font-bold text-primary hover:underline"
                   >
                     {Essential.phone.primary}
-                  </a>
-
-                  <a
-                    href={`tel:${Essential.phone.secondary}`}
-                    className="text-sm font-medium text-primary/80 hover:underline"
-                  >
-                    {Essential.phone.secondary}
                   </a>
                 </div>
               </div>

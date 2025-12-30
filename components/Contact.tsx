@@ -71,12 +71,6 @@ const Contact = () => {
           >
             {Essential.phone.primary}
           </a>
-          <a
-            href={`tel:${Essential.phone.secondary}`}
-            className="text-primary font-medium hover:underline"
-          >
-            {Essential.phone.secondary}
-          </a>
         </div>
       ),
       description: "We are available during business hours",
@@ -290,14 +284,6 @@ const Contact = () => {
                       >
                         <Phone size={16} />
                         Call {Essential.phone.primary}
-                      </a>
-
-                      <a
-                        href={`tel:${Essential.phone.secondary}`}
-                        className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline whitespace-nowrap"
-                      >
-                        <Phone size={16} />
-                        Call {Essential.phone.secondary}
                       </a>
                     </div>
                   </div>
