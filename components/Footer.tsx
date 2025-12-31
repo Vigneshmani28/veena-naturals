@@ -1,16 +1,5 @@
 import { Essential } from "@/utils/essentials";
-import {
-  Facebook,
-  Instagram,
-  Twitter,
-  Youtube,
-  Leaf,
-  Mail,
-  Phone,
-  MapPin,
-  MessageCircle,
-  Heart,
-} from "lucide-react";
+import { Instagram, MapPin, Heart, Leaf } from "lucide-react";
 import Address from "./Address";
 import Image from "next/image";
 
@@ -66,14 +55,38 @@ const Footer = () => {
   const certificatePdf = "/certificates/veena-naturals-udyam.pdf";
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white relative overflow-hidden">
+      {/* Natural Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Soft top accent */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-green-800/20 to-transparent" />
+
+        {/* Left decorative leaf */}
+        <div className="absolute left-0 top-1/3 opacity-10">
+          <Leaf className="w-40 h-40 text-green-900 rotate-12" />
+        </div>
+
+        {/* Right decorative leaf */}
+        <div className="absolute right-0 bottom-1/4 opacity-10">
+          <Leaf className="w-36 h-36 text-green-900 -rotate-12" />
+        </div>
+
+        {/* Subtle center accent */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5">
+          <Leaf className="w-20 h-20 text-green-900" />
+        </div>
+
+        {/* Soft bottom fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-green-900/10 to-transparent" />
+      </div>
+
       {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand Column */}
           <div>
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+              <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center relative">
                 <Image
                   src="/images/logo/logo.jpg"
                   alt="Veena Naturals Logo"
@@ -85,7 +98,7 @@ const Footer = () => {
               </div>
               <span className="text-2xl font-bold">VeenaNaturals</span>
             </div>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-400 mb-6 relative">
               Pure, organic products for a healthier you and a happier planet.
               Join us in our mission to bring nature's best to your doorstep.
             </p>
@@ -94,7 +107,7 @@ const Footer = () => {
                 <a
                   key={index}
                   href={social.href}
-                  className={`p-2 bg-gray-800 rounded-lg transition-colors ${social.hoverClass}`}
+                  className={`p-2 bg-gray-800 rounded-lg transition-colors relative ${social.hoverClass}`}
                   aria-label={social.label || "Social Media"}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -107,13 +120,16 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-bold mb-6">Quick Links</h3>
+            <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
+              <Leaf className="w-4 h-4 text-green-600" />
+              Quick Links
+            </h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
-                <li key={link.label}>
+                <li key={link.label} className="relative">
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-primary transition-colors"
+                    className="text-gray-400 hover:text-primary transition-colors pl-1"
                   >
                     {link.label}
                   </a>
@@ -124,13 +140,16 @@ const Footer = () => {
 
           {/* Products */}
           <div>
-            <h3 className="text-xl font-bold mb-6">Products</h3>
+            <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
+              <Leaf className="w-4 h-4 text-green-600" />
+              Products
+            </h3>
             <ul className="space-y-3">
               {productCategories.map((category) => (
-                <li key={category}>
+                <li key={category} className="relative">
                   <a
                     href="#products"
-                    className="text-gray-400 hover:text-primary transition-colors"
+                    className="text-gray-400 hover:text-primary transition-colors pl-1"
                   >
                     {category}
                   </a>
@@ -141,9 +160,13 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-bold mb-6">Contact Info</h3>
+            <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
+              <Leaf className="w-4 h-4 text-green-600 -rotate-12" />
+              Contact Info
+            </h3>
             <div className="space-y-4">
-              <div className="flex items-start space-x-3">
+              <div className="flex items-start space-x-3 relative">
+                <div className="absolute -left-2 top-0"></div>
                 <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                 <div>
                   <div className="font-medium">Address</div>
@@ -163,10 +186,10 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-gray-950 py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative bg-gray-950 py-6 border-t border-gray-900/30">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-gray-400 text-sm">
+            <div className="text-gray-400 text-sm flex items-center gap-2">
               © {new Date().getFullYear()} VeenaNaturals. All rights reserved.
             </div>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
@@ -184,7 +207,7 @@ const Footer = () => {
                       ? "/policy/return-policy"
                       : "#"
                   }
-                  className="hover:text-primary transition-colors"
+                  className="hover:text-primary transition-colors relative"
                 >
                   {link}
                 </a>
@@ -192,8 +215,8 @@ const Footer = () => {
             </div>
             <div className="flex items-center text-sm text-gray-400 gap-1">
               <span>Made with</span>
-              <Heart className="h-4 w-4 text-primary fill-primary" /> For Beauty
-              Lovers
+              <Heart className="h-4 w-4 text-primary fill-primary" />
+              <span>For Beauty Lovers</span>
             </div>
           </div>
         </div>
