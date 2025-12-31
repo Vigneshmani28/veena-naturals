@@ -100,9 +100,25 @@ const Products = () => {
   };
 
   const handleWhatsAppClick = (product: (typeof products)[0]) => {
-    const message = `Hello! I'm interested in purchasing:\n\n*${product.name}*\nPrice: ₹${product.price}\nOriginal Price: ₹${product.originalPrice}\n\nPlease provide more details about this product.`;
+    const message = `Hello,
+
+I would like to enquire about the following product from your collection:
+
+*${product.name}*
+Category: ${product.category}
+
+Product Image:
+${window.location.origin}${product.image}
+
+Kindly share more details about this product, including usage instructions and availability.
+
+Thank you.`;
+
     const encodedMessage = encodeURIComponent(message);
-    const phoneNumber = Essential.phone; // Replace with your WhatsApp number
+    const phoneNumber = Essential.phone.primary
+      .replace(/\s+/g, "")
+      .replace("+", "");
+
     window.open(
       `https://wa.me/${phoneNumber}?text=${encodedMessage}`,
       "_blank"
