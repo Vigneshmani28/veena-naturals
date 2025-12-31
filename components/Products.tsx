@@ -70,7 +70,7 @@ const products = [
       "Aamanakku(Castor oil)",
     ],
     get description() {
-      return `Herbal hair oil with ${this.ingredients.length} herbal ingredients for glowing skin`;
+      return `Herbal hair oil made with ${this.ingredients.length} traditional herbs to promote strong, healthy hair`;
     },
   },
 ];
@@ -89,15 +89,15 @@ const Products = () => {
           product.category.includes(selectedCategory)
         );
 
- const nextSlide = () => {
-  setCurrentSlide((prev) => (prev + 1) % filteredProducts.length);
-};
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % filteredProducts.length);
+  };
 
-const prevSlide = () => {
-  setCurrentSlide((prev) => 
-    (prev - 1 + filteredProducts.length) % filteredProducts.length
-  );
-};
+  const prevSlide = () => {
+    setCurrentSlide(
+      (prev) => (prev - 1 + filteredProducts.length) % filteredProducts.length
+    );
+  };
 
   const handleWhatsAppClick = (product: (typeof products)[0]) => {
     const message = `Hello! I'm interested in purchasing:\n\n*${product.name}*\nPrice: ₹${product.price}\nOriginal Price: ₹${product.originalPrice}\n\nPlease provide more details about this product.`;

@@ -78,7 +78,7 @@ const Contact = () => {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Visit Us",
-      info: `${Essential.address.city}, ${Essential.address.state}, ${Essential.address.country} - ${Essential.address.zipcode}`,
+      info: `${Essential.address.city}, ${Essential.address.district}, ${Essential.address.state}, ${Essential.address.country} - ${Essential.address.zipcode}`,
     },
   ];
 
