@@ -91,6 +91,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preload" as="image" href="/images/logo/logo.jpg" />
+        <link rel="canonical" href="https://veenanaturals.in/" />
         <meta name="theme-color" content="#3B875F" />
       </head>
       <body className={inter.className}>
