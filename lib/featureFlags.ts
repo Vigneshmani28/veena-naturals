@@ -11,5 +11,5 @@ function isJan1st2026IST() {
 }
 
 export const FEATURES = {
-  NEW_YEAR_THEME: isJan1st2026IST(),
+  NEW_YEAR_THEME: false,
 };
