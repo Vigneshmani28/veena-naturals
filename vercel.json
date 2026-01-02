@@ -1,0 +1,20 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        { "type": "host", "value": "www.veenanaturals.in" }
+      ],
+      "destination": "https://veenanaturals.in/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        { "type": "host", "value": "veenanaturals.in" }
+      ],
+      "destination": "https://veenanaturals.in/$1",
+      "permanent": true
+    }
+  ]
+}
