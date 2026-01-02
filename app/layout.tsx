@@ -14,11 +14,13 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://veenanaturals.in"),
-  icons : {
+  icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
     ],
-    apple: "/apple-touch-icon.jpg",
+    apple: "/apple-touch-icon.png",
   },
   title: {
     default: "Veena Naturals | Pure Ayurvedic Beauty & Skincare Products",
@@ -38,7 +40,7 @@ export const metadata: Metadata = {
     "ayurvedic hair oil",
     "chemical-free skincare",
     "Indian herbal products",
-    "vegan beauty India"
+    "vegan beauty India",
   ],
   robots: {
     index: true,
@@ -46,18 +48,19 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
-  category: 'Beauty & Personal Care',
+  category: "Beauty & Personal Care",
   alternates: {
-    canonical: 'https://veenanaturals.in',
+    canonical: "https://veenanaturals.in",
   },
   openGraph: {
     title: "Veena Naturals | Pure Ayurvedic Beauty Products",
-    description: "Discover 100% natural Ayurvedic face packs, hair oils & skincare. Traditional herbs, modern beauty.",
+    description:
+      "Discover 100% natural Ayurvedic face packs, hair oils & skincare. Traditional herbs, modern beauty.",
     url: "https://veenanaturals.in",
     siteName: "Veena Naturals",
     images: [
@@ -74,7 +77,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Veena Naturals | Ayurvedic Beauty & Skincare",
-    description: "100% natural Ayurvedic skincare and haircare products. Pure herbs, visible results.",
+    description:
+      "100% natural Ayurvedic skincare and haircare products. Pure herbs, visible results.",
     creator: "@veenanaturals",
     images: ["https://veenanaturals.in/images/logo/logo.jpg"],
   },
@@ -89,7 +93,11 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link rel="preload" as="image" href="/images/logo/logo.jpg" />
         <meta name="theme-color" content="#3B875F" />
       </head>
