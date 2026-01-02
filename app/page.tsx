@@ -1,4 +1,3 @@
-import SEOHead from "@/components/SEOHead";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
 import Products from "@/components/Products";
@@ -14,25 +13,6 @@ import ScrollToTop from "@/components/ScrollToTop";
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <SEOHead
-        title="Veena Naturals | Pure Ayurvedic Beauty Products"
-        description="100% natural Ayurvedic face packs, hair oils & skincare. Traditional herbal ingredients for radiant skin & healthy hair. Free shipping across India."
-        keywords={[
-          "Ayurvedic beauty products",
-          "natural face pack",
-          "herbal hair oil",
-          "organic skincare India",
-          "buy Ayurvedic products online",
-          "natural beauty products",
-          "herbal skincare",
-          "Ayurvedic face pack for glowing skin",
-          "herbal hair oil for hair growth",
-          "chemical-free beauty products",
-        ]}
-        canonicalUrl="https://veenanaturals.in"
-        ogImage="https://veenanaturals.in/images/og-image.jpg"
-      />
-
       <Navbar />
       <main>
         <Hero />
